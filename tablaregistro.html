@@ -7,18 +7,23 @@
     </head>
 <body>
     <h3>Registro jugador</h3>
+    <form action="resultado.html" method="GET">
+
     <table border>
         <tr>
-        <th>Nombre del jugador</th><td><input type="text" name="nombre"/></td> 
+        <th>Nombre del jugador</th>
+        <td>
+            <input type="text" name="nombre" required/>
+        </td> 
         </tr>
         <tr>
-            <th>Correo:</th><td><input type="email" name="email"/></td>
+            <th>Correo:</th><td><input type="email" name="email" required/></td>
         </tr>
         <tr>
-            <th>Edad</th><td><input type="number" name="edad"/></td>
+            <th>Edad</th><td><input type="number" name="edad" min="12" max="40" required/></td>
         </tr>
         <tr>
-            <th>Nickname:</th><td><input type="text" name="nickname"/></td>
+            <th>Nickname:</th><td><input type="text" name="nickname" pattern="\w+"/></td>
         </tr>
         <tr>
             <th>Categoria</th><td><input type="radio" name="categoria"/>Principiante<input type="radio" name="categoria"/>
@@ -41,5 +46,15 @@
         <tr>
             <th>Fecha inscripción:</th><td><input type="date" name="date"/></td>
         </tr>
+        <tr>
+            <th>
+            <input type="submit" value="Enviar formulario">
+            </th>
+            <td>
+            <input type="reset" value="Restablecer formulario">
+            </td>
+        </tr>
     </table>
+
+</form>
 </body>
